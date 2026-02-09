@@ -1,0 +1,117 @@
+Music Player Demo Script
+=========================
+
+**Overall Goal:** Demonstrate the UI, features, edge-case handling, and accessibility of the music player prototype.
+
+---
+
+**1. Introduction & UI Overview**
+
+*   **Action:** Launch the app from the home screen.
+*   **Narration:**
+    *"Welcome to the Music Player demo. Here we see the main UI, featuring album art, track title and artist, a playback progress bar with time indicators, and transport controls for playback, navigation, repeat, and favorite status."*
+
+**2. Basic Playback & Navigation**
+
+*   **Action:** Tap the Play button.
+*   **Narration:**
+    *"Tapping Play begins playback of the first track, 'Fade'. The progress bar and current time start updating."*
+*   **Action:** Tap the Next button.
+*   **Narration:**
+    *"We can skip to the next track, 'Memories'."*
+*   **Action:** Tap the Next button again.
+*   **Narration:**
+    *"Skipping again brings us to 'Remote Location'. This track doesn't have album art in its metadata, so a placeholder is displayed instead."*
+*   **Action:** Immediately tap the Previous button (within 2 seconds of the track starting).
+*   **Narration:**
+    *"If we tap Previous within the first 2 seconds of a track starting, we go back to the prior track in the playlist."*
+*   **Action:** Wait 3-4 seconds, then tap the Previous button.
+*   **Narration:**
+    *"However, if more than 2 seconds have elapsed, tapping Previous restarts the current track from the beginning, like so."*
+*   **Action:** Tap the Pause button.
+*   **Narration:**
+    *"And tapping Pause stops playback."*
+
+**3. Progress Bar, Seeking & Buffering**
+
+*   **Action:** Tap Play button to resume playback.
+*   **Action:** Tap and HOLD the circular scrubber handle for 1-2 seconds without moving, then release.
+*   **Narration:**
+    *"The circular scrubber handle increases in size when pressed or dragged. This provides a larger touch target, making it easier for the user to interact with and seek accurately."*
+*   **Action:** Drag the scrubber to seek to roughly 50% of the track.
+*   **Narration:**
+    *"We can seek to any position in the track. You'll also notice the lighter gray line ahead of the current progress—this indicates the simulated buffered position, which gradually increases as the track 'loads' in the background."*
+
+
+**4. Handling Edge Cases: Long Text & Load Errors**
+
+*   **Action:** Tap Next until Track 4 "Loading Error" is shown.
+*   **Narration:**
+    *"The player also handles loading errors gracefully. This track in the playlist is intentionally broken and cannot be loaded, so an error message is shown in place of the track metadata..."*
+*   **Action:** Wait for 1-2 seconds until the player auto-skips to Track 5, "Retroverse Pt1".
+*   **Narration:**
+    *"...and after a brief moment, to avoid interrupting the listening experience, the player automatically skips to the next playable track in the playlist."*
+*   **Action:** Click Next so that Track 6, "Smile", is playing.
+*   **Narration:**
+    *"The UI needs to handle metadata of varying lengths. For tracks with long titles or artist names, like this one, the text automatically begins scrolling in a marquee effect after a short delay, ensuring all information remains visible without compromising the layout."*
+
+**5. Repeat Modes & Favorites**
+
+*   **Action:** Tap the Repeat button once (Icon changes from Repeat to RepeatOne).
+*   **Narration:**
+    *"The repeat button cycles through three modes: Off, Repeat One, and Repeat All. Tapping it once enables 'Repeat One', which loops the current track."*
+*   **Action:** Tap the Repeat button again (Icon changes from RepeatOne to RepeatAll).
+*   **Narration:**
+    *"Tapping again enables 'Repeat All', which will loop the entire playlist. With 'Repeat All' active, playlist navigation wraps around. If we navigate to the last track..."*
+*   **Narration:**
+    *"...the Next button remains enabled."*
+*   **Action:** Tap Next button.
+*   **Narration:**
+    *"Tapping Next now wraps around to the first track, 'Fade'."*
+*   **Action:** Tap Previous button (within 2 seconds).
+*   **Narration:**
+    *"And tapping Previous on the first track also wraps around, taking us back to the end of the playlist."*
+*   **Action:** Tap Repeat button again (Icon changes from RepeatAll to Repeat).
+*   **Narration:**
+    *"Tapping a third time disables repeat mode. With Repeat off, the Next button on this last track is now disabled."*
+*   **Action:** Tap Previous until Track 1 "Fade" is playing.
+*   **Narration:**
+    *"And if we go to the first track and tap Previous..."*
+*   **Action:** Tap Previous button (within 2 seconds).
+*   **Narration:**
+    *"...it now restarts the track from the beginning instead of wrapping around."*
+*   **Action:** Tap the Favorite button (Icon changes from border to filled heart).
+*   **Narration:**
+    *"We can toggle a track as a favorite by tapping the heart icon. This state is remembered for each track in the playlist."*
+
+**6. Accessibility with TalkBack**
+
+*   **Action:** Enable TalkBack via system settings or shortcut.
+*   **Narration:**
+    *"The player is designed from the ground up for accessibility. With TalkBack enabled, all controls are focusable and provide clear, meaningful descriptions for screen reader users."*
+*   **Action:** Navigate focus to the slider/progress bar.
+*   **Narration:**
+    *"A key accessibility feature is the progress bar description. Instead of announcing an ambiguous percentage, it provides the state in an accessible time format, announcing 'X minutes Y seconds', matching the visual timestamps."*
+*   **Action:** Navigate focus to the Repeat button (ensure it's in the OFF state first).
+*   **Narration:**
+    *"Buttons with multiple states clearly announce their current state and the result of activation. For example, the repeat button announces: 'Repeat off; enable repeat one'."*
+*   **Action:** Double-tap to activate Repeat One mode.
+*   **Narration:**
+    *"After activating, its description updates to: 'Repeat one track; enable repeat all'."*
+*   **Action:** Navigate focus to the Play/Pause button (when paused).
+*   **Narration:**
+    *"Similarly, the main action button tells us its function based on the current state: 'Play'."*
+*   **Action:** Navigate focus to the Favorite button.
+*   **Narration:**
+    *"And the favorite button describes its action: 'Add to favorites' or 'Remove from favorites'."*
+*   **Action:** Disable TalkBack.
+
+**7. Dynamic Widget & Conclusion**
+
+*   **Action:** Tap Play.
+*   **Narration:**
+    *"All that's left is to listen to the music and... dance?!"*
+*   **Action:** Use pinch-to-zoom, pan, and rotation gestures to demonstrate widget scaling, movement, and rotation while music is playing.
+*   **Narration:**
+    *"This concludes our demo. Thank you for watching!"*
+*   **Action:** Tap the circular Refresh button in the bottom-right corner.

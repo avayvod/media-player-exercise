@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="experimental.users.avayvod.musicplayer">
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="33" />
+
+    <application
+        android:icon="@drawable/appicon"
+        android:label="Music Player"
+        android:theme="@style/Theme.App"
+        android:taskAffinity="">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Music Player"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
