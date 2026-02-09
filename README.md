@@ -4,7 +4,7 @@ A functional prototype of a music player widget built with Jetpack Compose accor
 
 ## Demo
 
-*[![Watch the demo](thumbnail.png)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)*
+*[![Watch the demo](thumbnail.png)](https://www.youtube.com/watch?v=h8EfQo7GkBM)*
 
 Watch the demo video to see the player in action, including its UI, features, edge-case handling, and accessibility support.
 
